@@ -1,0 +1,19 @@
+body{
+    background-color: #05AFF2;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+}
+.logo{
+    width: 500px;
+    height: 250px;
+    border-radius: 50px;
+}
+#email, #senha{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 35px;
+    border-radius: 50px;
+    margin: 15px;
+}
+
