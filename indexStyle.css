@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.menu-container {
+    position: absolute; /* Fixa o menu na tela */
+    top: 10px; /* Alinha o menu ao topo da página */
+    left: 0; /* Alinha o menu à esquerda da página */
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+    background-color: white; /* Adiciona fundo branco para o menu, se necessário */
+}
+
+.menu-toggle {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    margin: 20px;
+}
+
+.bar {
+    background-color: #333;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    transition: all 0.3s ease;
+    border-radius: 3px; /* Adiciona arredondamento para um estilo mais suave */
+}
+
+.bar1, .bar2, .bar3 {
+    left: 0;
+}
+
+.bar1 {
+    top: 0;
+}
+
+.bar2 {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bar3 {
+    bottom: 0;
+}
+
+.menu-toggle.active .bar1 {
+    transform: rotate(45deg);
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.menu-toggle.active .bar2 {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar3 {
+    transform: rotate(-45deg);
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+.nav-menu {
+    display: none;
+}
+
+.menu-toggle.active + .nav-menu {
+    display: block;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    position: relative; /* Garante que o header tenha seu próprio contexto de empilhamento */
+    z-index: 1; /* Garante que o header fique abaixo do menu, se necessário */
+    background-color: rgb(255, 255, 255);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+}
+
+.icon {
+    margin-right: 10px;
+    width: 55px;
+    height: 55px;
+}
+.biblioteca {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz com que a imagem cubra toda a área disponível */
+}
+
+.text {
+    position: absolute;
+    top: 5%;
+    right: 50%;
+    color: white; /* Altere a cor do texto conforme necessário */
+    text-align: center;
+    padding: 110px 35px 110px 35px; /* Opcional, para adicionar algum espaçamento interno */
+    font-size: 45px;
+    line-height: 2;
+    font-family: 'Palatino Linotype', 'Palatino', serif;
+    background: rgba(0, 0, 0, 0.5); /* Opcional, adiciona um fundo semi-transparente para melhorar a legibilidade do texto */
+}
